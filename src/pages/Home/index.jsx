@@ -6,44 +6,37 @@ export default function Home() {
 
     const [pokemon, setPokemon] = useState([]);
     const [pokeDetails, setPokeDetails] = useState([]);
-    
+
     async function loadApi() {
         const response = await api.get();
         response.data.results.map(e => {
             const res = api.get(e.name)
-            .then(res => {
-                const persons = res.data;
-                setPokeDetails(persons);
+                .then(res => {
+                    const det = res.data;
+                    setPokeDetails(det);
                 })
-            
+
         })
-        
-        
+
         setPokemon(response.data.results);
-        // let details = response.data.results.map(e => e.name);
-        
+
     }
-    
+
 
 
     useEffect(() => {
-                loadApi();
-        });
+        loadApi();
+    });
 
     return (
         <div>
-        <div className="box">
-       {pokemon.map(e => (
-         <li key={e.id}>
-           
-               <strong>{e.name}</strong><br />
-              
-                   
-               ))}
-
-         </li>
-       ))}
-     </div>
+            <div>
+                {pokemon.map(e => (
+                    <li key={e.name}>
+                        <strong>{e.name}</strong><br />
+                    </li>
+                ))}
+            </div>
         </div>
     );
 }

@@ -1,0 +1,591 @@
+
+{
+  "header": {
+    "reportVersion": 1,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20200515.004724.9076.0.001.json",
+    "dumpEventTime": "2020-05-15T00:47:24Z",
+    "dumpEventTimeStamp": "1589514444931",
+    "processId": 9076,
+    "cwd": "C:\\Users\\Thiag\\Documents\\projetos\\pokeshop",
+    "commandLine": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\Thiag\\Documents\\projetos\\pokeshop\\node_modules\\react-scripts\\scripts\\start.js"
+    ],
+    "nodejsVersion": "v12.16.1",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "win32",
+    "componentVersions": {
+      "node": "12.16.1",
+      "v8": "7.8.279.23-node.31",
+      "uv": "1.34.0",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "72",
+      "nghttp2": "1.40.0",
+      "napi": "5",
+      "llhttp": "2.0.4",
+      "http_parser": "2.9.3",
+      "openssl": "1.1.1d",
+      "cldr": "35.1",
+      "icu": "64.2",
+      "tz": "2019c",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "lts": "Erbium",
+      "headersUrl": "https://nodejs.org/download/release/v12.16.1/node-v12.16.1-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.16.1/node-v12.16.1.tar.gz",
+      "libUrl": "https://nodejs.org/download/release/v12.16.1/win-x64/node.lib"
+    },
+    "osName": "Windows_NT",
+    "osRelease": "10.0.16299",
+    "osVersion": "Windows 10 Home",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "Intel(R) Core(TM) i3-4010U CPU @ 1.70GHz",
+        "speed": 1696,
+        "user": 7839187,
+        "nice": 0,
+        "sys": 3932265,
+        "idle": 23172593,
+        "irq": 341656
+      },
+      {
+        "model": "Intel(R) Core(TM) i3-4010U CPU @ 1.70GHz",
+        "speed": 1696,
+        "user": 7628328,
+        "nice": 0,
+        "sys": 3107062,
+        "idle": 24208359,
+        "irq": 51875
+      },
+      {
+        "model": "Intel(R) Core(TM) i3-4010U CPU @ 1.70GHz",
+        "speed": 1696,
+        "user": 7982421,
+        "nice": 0,
+        "sys": 3290875,
+        "idle": 23670453,
+        "irq": 41906
+      },
+      {
+        "model": "Intel(R) Core(TM) i3-4010U CPU @ 1.70GHz",
+        "speed": 1696,
+        "user": 8347109,
+        "nice": 0,
+        "sys": 3050453,
+        "idle": 23546187,
+        "irq": 34015
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "3c:77:e6:d2:01:28",
+        "address": "2804:14d:5c8e:4573::3",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "3c:77:e6:d2:01:28",
+        "address": "2804:14d:5c8e:4573:88b1:2b76:ed51:386c",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "3c:77:e6:d2:01:28",
+        "address": "2804:14d:5c8e:4573:d161:a499:a2ac:e436",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "3c:77:e6:d2:01:28",
+        "address": "fe80::88b1:2b76:ed51:386c",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 15
+      },
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "3c:77:e6:d2:01:28",
+        "address": "192.168.0.17",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "::1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "Conexão Local* 11",
+        "internal": false,
+        "mac": "00:00:00:00:00:00",
+        "address": "2001:0:34f1:8072:2cfe:2082:3f57:ffee",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Conexão Local* 11",
+        "internal": false,
+        "mac": "00:00:00:00:00:00",
+        "address": "fe80::2cfe:2082:3f57:ffee",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 8
+      }
+    ],
+    "host": "DESKTOP-SI0PF4R"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x00007ff7b3c519f9",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+10873"
+    },
+    {
+      "pc": "0x00007ff7b3c55e1c",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+28316"
+    },
+    {
+      "pc": "0x00007ff7b3c54dd8",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+24152"
+    },
+    {
+      "pc": "0x00007ff7b3d534cb",
+      "symbol": "v8::base::CPU::has_sse+38363"
+    },
+    {
+      "pc": "0x00007ff7b4569f4e",
+      "symbol": "v8::Isolate::ReportExternalAllocationLimitReached+94"
+    },
+    {
+      "pc": "0x00007ff7b4552021",
+      "symbol": "v8::SharedArrayBuffer::Externalize+833"
+    },
+    {
+      "pc": "0x00007ff7b441e57c",
+      "symbol": "v8::internal::Heap::EphemeronKeyWriteBarrierFromCode+1436"
+    },
+    {
+      "pc": "0x00007ff7b4426521",
+      "symbol": "v8::internal::Heap::PageFlagsAreConsistent+3761"
+    },
+    {
+      "pc": "0x00007ff7b441bb13",
+      "symbol": "v8::internal::Heap::CollectGarbage+1283"
+    },
+    {
+      "pc": "0x00007ff7b441a184",
+      "symbol": "v8::internal::Heap::AddRetainedMap+2452"
+    },
+    {
+      "pc": "0x00007ff7b443b36d",
+      "symbol": "v8::internal::Factory::NewFillerObject+61"
+    },
+    {
+      "pc": "0x00007ff7b41a0c51",
+      "symbol": "v8::internal::interpreter::JumpTableTargetOffsets::iterator::operator=+1665"
+    },
+    {
+      "pc": "0x00007ff7b49b4ddd",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+546637"
+    },
+    {
+      "pc": "0x00007ff7b4a1d87c",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+975340"
+    },
+    {
+      "pc": "0x00007ff7b4939d8c",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+42748"
+    },
+    {
+      "pc": "0x00007ff7b49330bc",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+14892"
+    },
+    {
+      "pc": "0x00007ff7b49d06e9",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+659545"
+    },
+    {
+      "pc": "0x00007ff7b4939d8c",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+42748"
+    },
+    {
+      "pc": "0x00007ff7b4939d8c",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+42748"
+    },
+    {
+      "pc": "0x00007ff7b4939d8c",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+42748"
+    },
+    {
+      "pc": "0x00007ff7b49330bc",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+14892"
+    },
+    {
+      "pc": "0x00007ff7b4939d8c",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+42748"
+    },
+    {
+      "pc": "0x00007ff7b49330bc",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+14892"
+    },
+    {
+      "pc": "0x00007ff7b4939d8c",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+42748"
+    },
+    {
+      "pc": "0x00007ff7b4939d8c",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+42748"
+    },
+    {
+      "pc": "0x00007ff7b4939d8c",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+42748"
+    },
+    {
+      "pc": "0x00007ff7b49372c1",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+31793"
+    },
+    {
+      "pc": "0x00007ff7b4936eac",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+30748"
+    },
+    {
+      "pc": "0x00007ff7b4477c33",
+      "symbol": "v8::internal::Execution::CallWasm+1395"
+    },
+    {
+      "pc": "0x00007ff7b44775b6",
+      "symbol": "v8::internal::Execution::Call+182"
+    },
+    {
+      "pc": "0x00007ff7b454862d",
+      "symbol": "v8::Function::Call+605"
+    },
+    {
+      "pc": "0x00007ff7b3dadf1b",
+      "symbol": "napi_wrap+105755"
+    },
+    {
+      "pc": "0x00007ff7b3dfff44",
+      "symbol": "ENGINE_get_finish_function+836"
+    },
+    {
+      "pc": "0x00007ff7b3dfc99c",
+      "symbol": "uv_run+236"
+    },
+    {
+      "pc": "0x00007ff7b3d1ad43",
+      "symbol": "v8::internal::Scope::locals+31043"
+    },
+    {
+      "pc": "0x00007ff7b3d7a3d3",
+      "symbol": "node::Start+275"
+    },
+    {
+      "pc": "0x00007ff7b3c267ac",
+      "symbol": "RC4_options+339628"
+    },
+    {
+      "pc": "0x00007ff7b4a6be08",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+1296248"
+    },
+    {
+      "pc": "0x00007ffe96d137e4",
+      "symbol": "BaseThreadInitThunk+20"
+    },
+    {
+      "pc": "0x00007ffe987bcb81",
+      "symbol": "RtlUserThreadStart+33"
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 93716480,
+    "totalCommittedMemory": 93716480,
+    "usedMemory": 88963328,
+    "availableMemory": 2109188440,
+    "memoryLimit": 2197815296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 262144,
+        "capacity": 32808,
+        "used": 32808,
+        "available": 0
+      },
+      "new_space": {
+        "memorySize": 1048576,
+        "committedMemory": 1048576,
+        "capacity": 1047456,
+        "used": 1047440,
+        "available": 16
+      },
+      "old_space": {
+        "memorySize": 58867712,
+        "committedMemory": 58867712,
+        "capacity": 58647312,
+        "used": 55894744,
+        "available": 2752568
+      },
+      "code_space": {
+        "memorySize": 1740800,
+        "committedMemory": 1740800,
+        "capacity": 1645472,
+        "used": 1171616,
+        "available": 473856
+      },
+      "map_space": {
+        "memorySize": 3411968,
+        "committedMemory": 3411968,
+        "capacity": 3407248,
+        "used": 2591520,
+        "available": 815728
+      },
+      "large_object_space": {
+        "memorySize": 27762688,
+        "committedMemory": 27762688,
+        "capacity": 27680912,
+        "used": 27680912,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 622592,
+        "committedMemory": 622592,
+        "capacity": 544288,
+        "used": 544288,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 1047456,
+        "used": 0,
+        "available": 1047456
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 16.546,
+    "kernelCpuSeconds": 4.671,
+    "cpuConsumptionPercent": 9.06709,
+    "maxRss": 224305152,
+    "pageFaults": {
+      "IORequired": 149918,
+      "IONotRequired": 0
+    },
+    "fsActivity": {
+      "reads": 4998,
+      "writes": 14
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "=C:": "C:\\Users\\Thiag\\Documents\\projetos\\pokeshop",
+    "ACLOCAL_PATH": "C:\\Program Files\\Git\\mingw64\\share\\aclocal;C:\\Program Files\\Git\\usr\\share\\aclocal",
+    "ALLUSERSPROFILE": "C:\\ProgramData",
+    "ANDROID_HOME": "C:\\Users\\Thiag\\AppData\\Local\\Android\\Sdk",
+    "APPDATA": "C:\\Users\\Thiag\\AppData\\Roaming",
+    "BABEL_ENV": "development",
+    "COLORTERM": "truecolor",
+    "COMMONPROGRAMFILES": "C:\\Program Files\\Common Files",
+    "CommonProgramFiles(x86)": "C:\\Program Files (x86)\\Common Files",
+    "CommonProgramW6432": "C:\\Program Files\\Common Files",
+    "COMPUTERNAME": "DESKTOP-SI0PF4R",
+    "COMSPEC": "C:\\Windows\\system32\\cmd.exe",
+    "CONFIG_SITE": "C:/Program Files/Git/mingw64/etc/config.site",
+    "DISPLAY": "needs-to-be-defined",
+    "EXEPATH": "C:\\Program Files\\Git",
+    "FPS_BROWSER_APP_PROFILE_STRING": "Internet Explorer",
+    "FPS_BROWSER_USER_PROFILE_STRING": "Default",
+    "HOME": "C:\\Users\\Thiag",
+    "HOMEDRIVE": "C:",
+    "HOMEPATH": "\\Users\\Thiag",
+    "HOSTNAME": "DESKTOP-SI0PF4R",
+    "INFOPATH": "C:\\Program Files\\Git\\usr\\local\\info;C:\\Program Files\\Git\\usr\\share\\info;C:\\Program Files\\Git\\usr\\info;C:\\Program Files\\Git\\share\\info",
+    "INIT_CWD": "C:\\Users\\Thiag\\Documents\\projetos\\pokeshop",
+    "JAVA_HOME": "C:\\Program Files\\Java\\jdk1.8.0_241",
+    "LANG": "pt_BR.UTF-8",
+    "LOCALAPPDATA": "C:\\Users\\Thiag\\AppData\\Local",
+    "LOGONSERVER": "\\\\DESKTOP-SI0PF4R",
+    "MANPATH": "C:\\Program Files\\Git\\mingw64\\local\\man;C:\\Program Files\\Git\\mingw64\\share\\man;C:\\Program Files\\Git\\usr\\local\\man;C:\\Program Files\\Git\\usr\\share\\man;C:\\Program Files\\Git\\usr\\man;C:\\Program Files\\Git\\share\\man",
+    "MINGW_CHOST": "x86_64-w64-mingw32",
+    "MINGW_PACKAGE_PREFIX": "mingw-w64-x86_64",
+    "MINGW_PREFIX": "C:/Program Files/Git/mingw64",
+    "MSYSTEM": "MINGW64",
+    "MSYSTEM_CARCH": "x86_64",
+    "MSYSTEM_CHOST": "x86_64-w64-mingw32",
+    "MSYSTEM_PREFIX": "C:/Program Files/Git/mingw64",
+    "NODE": "C:\\Program Files\\nodejs\\node.exe",
+    "NODE_ENV": "development",
+    "NODE_PATH": "",
+    "npm_config_argv": "{\"remain\":[],\"cooked\":[\"run\",\"start\"],\"original\":[\"start\"]}",
+    "npm_config_bin_links": "true",
+    "npm_config_ignore_optional": "",
+    "npm_config_ignore_scripts": "",
+    "npm_config_init_license": "MIT",
+    "npm_config_init_version": "1.0.0",
+    "npm_config_registry": "https://registry.yarnpkg.com",
+    "npm_config_save_prefix": "^",
+    "npm_config_strict_ssl": "true",
+    "npm_config_user_agent": "yarn/1.22.4 npm/? node/v12.16.1 win32 x64",
+    "npm_config_version_commit_hooks": "true",
+    "npm_config_version_git_message": "v%s",
+    "npm_config_version_git_sign": "",
+    "npm_config_version_git_tag": "true",
+    "npm_config_version_tag_prefix": "v",
+    "npm_execpath": "C:\\Users\\Thiag\\AppData\\Roaming\\npm\\node_modules\\yarn\\bin\\yarn.js",
+    "npm_lifecycle_event": "start",
+    "npm_lifecycle_script": "react-scripts start",
+    "npm_node_execpath": "C:\\Program Files\\nodejs\\node.exe",
+    "npm_package_browserslist_development_0": "last 1 chrome version",
+    "npm_package_browserslist_development_1": "last 1 firefox version",
+    "npm_package_browserslist_development_2": "last 1 safari version",
+    "npm_package_browserslist_production_0": ">0.2%",
+    "npm_package_browserslist_production_1": "not dead",
+    "npm_package_browserslist_production_2": "not op_mini all",
+    "npm_package_dependencies_axios": "^0.19.2",
+    "npm_package_dependencies_react": "^16.13.1",
+    "npm_package_dependencies_react_dom": "^16.13.1",
+    "npm_package_dependencies_react_router_dom": "^5.2.0",
+    "npm_package_dependencies_react_scripts": "3.4.1",
+    "npm_package_dependencies__testing_library_jest_dom": "^4.2.4",
+    "npm_package_dependencies__testing_library_react": "^9.3.2",
+    "npm_package_dependencies__testing_library_user_event": "^7.1.2",
+    "npm_package_description": "In the project directory, you can run:",
+    "npm_package_eslintConfig_extends": "react-app",
+    "npm_package_name": "pokeshop",
+    "npm_package_private": "true",
+    "npm_package_readmeFilename": "README.md",
+    "npm_package_scripts_build": "react-scripts build",
+    "npm_package_scripts_eject": "react-scripts eject",
+    "npm_package_scripts_start": "react-scripts start",
+    "npm_package_scripts_test": "react-scripts test",
+    "npm_package_version": "0.1.0",
+    "NUMBER_OF_PROCESSORS": "4",
+    "OLDPWD": "C:/Users/Thiag",
+    "ORIGINAL_PATH": "C:\\Program Files\\Git\\cmd;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs;C:\\Program Files\\dotnet;C:\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Java\\jdk1.8.0_241\\bin;C:\\Users\\Thiag\\AppData\\Local\\Android\\Sdk\\emulator;C:\\Users\\Thiag\\AppData\\Local\\Android\\Sdk\\tools;C:\\Users\\Thiag\\AppData\\Local\\Android\\Sdk\\tools\\bin;C:\\Users\\Thiag\\AppData\\Local\\Android\\Sdk\\platform-tools;C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin;C:\\Program Files\\MySQL\\MySQL Server 5.7\\bin;C:\\Users\\Thiag\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Thiag\\AppData\\Local\\hyper\\app-3.0.2\\resources\\bin;C:\\Users\\Thiag\\AppData\\Roaming\\npm;C:\\Users\\Thiag\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Thiag\\.dotnet\\tools;C:\\Users\\Thiag\\AppData\\Roaming\\Composer\\vendor\\bin",
+    "ORIGINAL_TEMP": "C:/Users/Thiag/AppData/Local/Temp",
+    "ORIGINAL_TMP": "C:/Users/Thiag/AppData/Local/Temp",
+    "OS": "Windows_NT",
+    "PATH": "C:\\Users\\Thiag\\AppData\\Local\\Temp\\yarn--1589514211446-0.03781178321205125;C:\\Users\\Thiag\\Documents\\projetos\\pokeshop\\node_modules\\.bin;C:\\Users\\Thiag\\AppData\\Local\\Yarn\\Data\\link\\node_modules\\.bin;C:\\Users\\Thiag\\AppData\\Local\\Yarn\\bin;C:\\Program Files\\libexec\\lib\\node_modules\\npm\\bin\\node-gyp-bin;C:\\Program Files\\lib\\node_modules\\npm\\bin\\node-gyp-bin;C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\node-gyp-bin;C:\\Users\\Thiag\\bin;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\local\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs;C:\\Program Files\\dotnet;C:\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Java\\jdk1.8.0_241\\bin;C:\\Users\\Thiag\\AppData\\Local\\Android\\Sdk\\emulator;C:\\Users\\Thiag\\AppData\\Local\\Android\\Sdk\\tools;C:\\Users\\Thiag\\AppData\\Local\\Android\\Sdk\\tools\\bin;C:\\Users\\Thiag\\AppData\\Local\\Android\\Sdk\\platform-tools;C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin;C:\\Program Files\\MySQL\\MySQL Server 5.7\\bin;C:\\Users\\Thiag\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Thiag\\AppData\\Local\\hyper\\app-3.0.2\\resources\\bin;C:\\Users\\Thiag\\AppData\\Roaming\\npm;C:\\Users\\Thiag\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Thiag\\.dotnet\\tools;C:\\Users\\Thiag\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Program Files\\Git\\usr\\bin\\vendor_perl;C:\\Program Files\\Git\\usr\\bin\\core_perl",
+    "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JSE;.WSF;.WSH;.MSC",
+    "PKG_CONFIG_PATH": "C:\\Program Files\\Git\\mingw64\\lib\\pkgconfig;C:\\Program Files\\Git\\mingw64\\share\\pkgconfig",
+    "PLINK_PROTOCOL": "ssh",
+    "PROCESSOR_ARCHITECTURE": "AMD64",
+    "PROCESSOR_IDENTIFIER": "Intel64 Family 6 Model 69 Stepping 1, GenuineIntel",
+    "PROCESSOR_LEVEL": "6",
+    "PROCESSOR_REVISION": "4501",
+    "ProgramData": "C:\\ProgramData",
+    "PROGRAMFILES": "C:\\Program Files",
+    "ProgramFiles(x86)": "C:\\Program Files (x86)",
+    "ProgramW6432": "C:\\Program Files",
+    "PROMPT": "$P$G",
+    "PSModulePath": "C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules",
+    "PUBLIC": "C:\\Users\\Public",
+    "PWD": "C:/Users/Thiag/Documents/projetos/pokeshop",
+    "SESSIONNAME": "Console",
+    "SHELL": "C:\\Program Files\\Git\\usr\\bin\\bash.exe",
+    "SHLVL": "2",
+    "SSH_ASKPASS": "C:/Program Files/Git/mingw64/libexec/git-core/git-gui--askpass",
+    "SYSTEMDRIVE": "C:",
+    "SYSTEMROOT": "C:\\Windows",
+    "TEMP": "C:\\Users\\Thiag\\AppData\\Local\\Temp",
+    "TERM": "cygwin",
+    "TERM_PROGRAM": "Hyper",
+    "TERM_PROGRAM_VERSION": "3.0.2",
+    "TMP": "C:\\Users\\Thiag\\AppData\\Local\\Temp",
+    "TMPDIR": "C:\\Users\\Thiag\\AppData\\Local\\Temp",
+    "USERDOMAIN": "DESKTOP-SI0PF4R",
+    "USERDOMAIN_ROAMINGPROFILE": "DESKTOP-SI0PF4R",
+    "USERNAME": "dev",
+    "USERPROFILE": "C:\\Users\\Thiag",
+    "WEBPACK_DEV_SERVER": "true",
+    "WINDIR": "C:\\Windows",
+    "YARN_WRAP_OUTPUT": "false",
+    "_": "C:/Program Files/nodejs/node"
+  },
+  "sharedObjects": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "C:\\Windows\\SYSTEM32\\ntdll.dll",
+    "C:\\Windows\\System32\\KERNEL32.DLL",
+    "C:\\Windows\\System32\\KERNELBASE.dll",
+    "C:\\Windows\\SYSTEM32\\apphelp.dll",
+    "C:\\Windows\\System32\\WS2_32.dll",
+    "C:\\Windows\\System32\\RPCRT4.dll",
+    "C:\\Windows\\System32\\PSAPI.DLL",
+    "C:\\Windows\\SYSTEM32\\dbghelp.dll",
+    "C:\\Windows\\System32\\ADVAPI32.dll",
+    "C:\\Windows\\System32\\msvcrt.dll",
+    "C:\\Windows\\System32\\sechost.dll",
+    "C:\\Windows\\SYSTEM32\\IPHLPAPI.DLL",
+    "C:\\Windows\\SYSTEM32\\USERENV.dll",
+    "C:\\Windows\\System32\\ucrtbase.dll",
+    "C:\\Windows\\System32\\USER32.dll",
+    "C:\\Windows\\System32\\win32u.dll",
+    "C:\\Windows\\System32\\profapi.dll",
+    "C:\\Windows\\System32\\GDI32.dll",
+    "C:\\Windows\\System32\\gdi32full.dll",
+    "C:\\Windows\\System32\\msvcp_win.dll",
+    "C:\\Windows\\System32\\CRYPT32.dll",
+    "C:\\Windows\\System32\\MSASN1.dll",
+    "C:\\Windows\\SYSTEM32\\bcrypt.dll",
+    "C:\\Windows\\SYSTEM32\\WINMM.dll",
+    "C:\\Windows\\SYSTEM32\\winmmbase.dll",
+    "C:\\Windows\\System32\\cfgmgr32.dll",
+    "C:\\Windows\\System32\\IMM32.DLL",
+    "C:\\Windows\\System32\\combase.dll",
+    "C:\\Windows\\System32\\bcryptPrimitives.dll",
+    "C:\\Windows\\System32\\powrprof.dll",
+    "C:\\Windows\\SYSTEM32\\CRYPTBASE.DLL",
+    "C:\\Windows\\system32\\uxtheme.dll",
+    "C:\\Windows\\system32\\mswsock.dll",
+    "C:\\Windows\\System32\\kernel.appcore.dll",
+    "C:\\Windows\\System32\\NSI.dll",
+    "C:\\Windows\\SYSTEM32\\dhcpcsvc6.DLL",
+    "C:\\Windows\\SYSTEM32\\dhcpcsvc.DLL",
+    "C:\\Windows\\system32\\napinsp.dll",
+    "C:\\Windows\\system32\\pnrpnsp.dll",
+    "C:\\Windows\\system32\\NLAapi.dll",
+    "C:\\Windows\\SYSTEM32\\DNSAPI.dll",
+    "C:\\Windows\\System32\\winrnr.dll",
+    "C:\\Windows\\System32\\rasadhlp.dll",
+    "C:\\Windows\\System32\\fwpuclnt.dll"
+  ]
+}
