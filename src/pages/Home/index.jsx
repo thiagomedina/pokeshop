@@ -9,10 +9,21 @@ export default function Home() {
     
     async function loadApi() {
         const response = await api.get();
+        response.data.results.map(e => {
+            const res = api.get(e.name)
+            .then(res => {
+                const persons = res.data;
+                setPokeDetails(persons);
+                })
+            
+        })
+        
+        
         setPokemon(response.data.results);
-        let details = response.data.results.map(e => e.url);    
-        const res = await api.get(details);
+        // let details = response.data.results.map(e => e.name);
+        
     }
+    
 
 
     useEffect(() => {
