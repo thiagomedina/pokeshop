@@ -30,17 +30,21 @@ export default function PokeList() {
     return (
         <div>
 
-            {pokemon.map((data, id) => {
+            <div className="container-fluid">
+                <div className="d-flex flex-wrap">
 
-                
+                    {pokemon.map((data, id) => {
 
-                // let picture = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id + 1}.png`
-                // return <Card key={data.name} name={data.name} image={picture} price={data.price} />
-            })}
+                           let picture = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id + 1}.png`
+                         return (
+
+                            <Card key={data.name} name={data.name} image={picture} price={data.price}/>
+                        )
+                    })}
 
 
-
-            {console.log(pokemon)}
+                </div>
+            </div>
 
         </div >
     );
