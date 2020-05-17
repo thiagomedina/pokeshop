@@ -1,8 +1,43 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PokeList from './pokeList';
+import PropTypes from 'prop-types'
+import './products.css'
 
-export default function Products() {
+
+
+export default function Products(props) {
+
+    const [showMsg, setShowMsg] = useState(false);
+    const [product, setProduct] = useState('');
+
+    function visible() {
+
+        return props.visible ? null : 'hidden';
+    }
+
+    function showMessage(product) {
+        setShowMsg(true);
+        setProduct(product.name);
+        setTimeout(() => {
+            setShowMsg(false)
+        }, 2000)
+    }
+
     return (
-        <PokeList />
-    );  
+        <div className={visible()}>
+            {
+                showMsg ? <div show={false} className="alert alert-secondary" role="alert">
+                    <b>{product}</b> adicionado com sucesso ao carrinho!
+                </div> : null
+            }
+
+            <PokeList
+                showMessage={showMessage}
+                addProduct={props.addProduct} />
+        </div>
+    );
+}
+Products.propTypes = {
+    visible: PropTypes.bool.isRequired,
+    addProduct: PropTypes.func.isRequired
 }

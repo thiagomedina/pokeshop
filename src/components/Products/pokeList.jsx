@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import api from '../../services/api';
-import Card from '../Card/card'
+import Card from '../Card/card';
+import PropTypes from 'prop-types';
 
-export default function PokeList() {
+export default function PokeList(props) {
 
     const [pokemon, setPokemon] = useState([]);
 
@@ -18,27 +19,33 @@ export default function PokeList() {
 
         })
         setPokemon(data);
-
-
     }
-
 
     useEffect(() => {
         loadApi();
     }, []);
 
+    function handleBuy(event, product) {
+        event.preventDefault();
+        props.addProduct(product);
+        props.showMessage(product);
+    }
+
     return (
         <div>
 
-            <div className="container-fluid">
+            <div className="container mt-4">
                 <div className="d-flex flex-wrap">
 
                     {pokemon.map((data, id) => {
 
-                           let picture = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id + 1}.png`
-                         return (
+                        let picture = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id + 1}.png`
+                        return (
 
-                            <Card key={data.name} name={data.name} image={picture} price={data.price}/>
+                            <Card key={data.name} name={data.name} image={picture} price={data.price} clickFunction={(event) => handleBuy(event, data)} />
+
+
+
                         )
                     })}
 
@@ -48,4 +55,9 @@ export default function PokeList() {
 
         </div >
     );
+}
+PokeList.propTypes = {
+    addProduct: PropTypes.func.isRequired,
+    showMessage: PropTypes.func.isRequired
+
 }
