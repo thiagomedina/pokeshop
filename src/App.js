@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Home from '../src/pages/Home/index';
-import ShopCart from '../src/pages/ShopCart/index'
+import PokeList from '../src/components/Products/pokeList'
+import Home from '../src/pages/Home/home';
 function App() {
   return (
     <div >
       <BrowserRouter>
         <Switch>
           {/* <Route exact path="/" component={Home} /> */}
-          <Home />
+          <PokeList />
         </Switch>
       </BrowserRouter>
     </div>
