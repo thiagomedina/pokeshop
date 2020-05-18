@@ -21,19 +21,18 @@ export default function Home() {
             if (prod.name === product.name) {
                 objShopCart.products[id].amount++;
                 newProduct = false
-
-            }
-
-            if (newProduct) {
-                objShopCart.products.push({
-                    name: product.name, price: product.price,
-                    amount: 1
-                })
             }
         })
+        if (newProduct) {
+            objShopCart.products.push({
+                name: product.name, price: product.price,
+                amount: 1
+            })
+        }
+
 
         console.log(product)
-        console.log(objShopCart)
+        console.log(shopCart.products)
         setShopCart(objShopCart);
     }
 
@@ -59,7 +58,6 @@ export default function Home() {
                 />
 
                 <Products
-
                     visible={showProduct}
                     addProduct={addProduct}
                 />
