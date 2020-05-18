@@ -14,7 +14,8 @@ export default function PokeList(props) {
         const data = response.data.results.map(row => {
             return {
                 ...row,
-                price: (Math.random() * 10).toFixed(2).replace(".", ",")
+                price: (Math.random() * 10).toFixed(2).replace(".", ","),
+                id: Math.round(Math.random() * 10)
             }
 
         })

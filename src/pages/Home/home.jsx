@@ -5,40 +5,61 @@ import Checkout from '../../components/Checkout/checkout'
 import NavBar from '../../components/Navbar/navbar'
 
 export default function Home() {
-    const [shopCart, setShopCart] = useState({ product: [] });
+    const [shopCart, setShopCart] = useState({ products: [] });
     const [showProduct, setShowProduct] = useState(true);
     const [showCheckout, setShowCheckout] = useState(false);
     const [total, setTotal] = useState('0,00');
 
+
+
+
     function addProduct(product) {
         const objShopCart = Object.assign({}, shopCart)
         let newProduct = true;
-        objShopCart.product.forEach((prod, id) => {
+        objShopCart.products.forEach((prod, id) => {
+
             if (prod.name === product.name) {
-                objShopCart.product[id].amount++;
+                objShopCart.products[id].amount++;
                 newProduct = false
+
             }
 
             if (newProduct) {
-                objShopCart.product.push({
-                    name: product.name, price: product.price, 
+                objShopCart.products.push({
+                    name: product.name, price: product.price,
                     amount: 1
                 })
             }
         })
 
-
-
-
+        console.log(product)
+        console.log(objShopCart)
         setShopCart(objShopCart);
+    }
+
+    function handleShowProduct() {
+        setShowCheckout(false)
+        setShowProduct(true)
+    }
+
+    function handleShowCheckout(total) {
+        setShowCheckout(true)
+        setShowProduct(false)
+        setTotal(total);
+
     }
 
     return (
         <div>
             <div>
-                <NavBar />
+                <NavBar
+                    products={shopCart.products}
+                    handleShowProduct={handleShowProduct}
+                    handleShowCheckout={handleShowCheckout}
+                />
+
                 <Products
-                    
+
                     visible={showProduct}
                     addProduct={addProduct}
                 />
