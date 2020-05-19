@@ -8,7 +8,7 @@ export default function Home() {
     const [shopCart, setShopCart] = useState({ products: [] });
     const [showProduct, setShowProduct] = useState(true);
     const [showCheckout, setShowCheckout] = useState(false);
-    const [total, setTotal] = useState('0,00');
+    const [total, setTotal] = useState('0,00'); 
 
 
 
@@ -36,24 +36,27 @@ export default function Home() {
         setShopCart(objShopCart);
     }
 
-    function handleShowProduct() {
-        setShowCheckout(false)
-        setShowProduct(true)
-    }
+    // function handleShowProduct() {
+    //     setShowCheckout(false)
+    //     setShowProduct(true)
+    // }
 
     function handleShowCheckout(total) {
-        setShowCheckout(true)
-        setShowProduct(false)
+        // setShowCheckout(true)
+        // setShowProduct(false)
         setTotal(total);
 
     }
 
+    function handleCleanShopCart() {
+        setShopCart({ products: [] });
+      }
     return (
         <div>
             <div>
                 <NavBar
                     products={shopCart.products}
-                    handleShowProduct={handleShowProduct}
+                    // handleShowProduct={handleShowProduct}
                     handleShowCheckout={handleShowCheckout}
                 />
 
@@ -61,7 +64,10 @@ export default function Home() {
                     visible={showProduct}
                     addProduct={addProduct}
                 />
-                <Checkout />
+                   <Checkout
+                     products={shopCart.products}
+                    handleShowCheckout={handleShowCheckout}
+                    />
             </div>
         </div >
     );
