@@ -10,17 +10,24 @@ export default function PokeList(props) {
 
     async function loadApi() {
 
-        const response = await api.get()
+        const response = await api.get();
 
-        const data = response.data.results.map(row => {
-            return {
-                ...row,
-                price: (Math.random() * 10).toFixed(2).replace(".", ","),
-                id: Math.round(Math.random() * 10)
+        const pokemons = response.data.results;
+
+
+        pokemons.forEach(async (p) => {
+            const response = await api.get(`https://pokeapi.co/api/v2/pokemon/${p.name}`);
+
+            let type = response.data.types[0].type.name
+
+            if (type === 'water') {
+
+                p.price = (Math.random() * 100).toFixed(2).replace(".", ",");
             }
+        });
+        
 
-        })
-        setPokemon(data);
+        console.log(pokemons)
     }
 
     useEffect(() => {
@@ -35,9 +42,12 @@ export default function PokeList(props) {
 
     return (
         <div>
+            {
+                console.log(pokemon)
+            }
 
-            <div className="container-fluid mt-4">
-                <div className="d-flex flex-wrap">
+            {/* <div className="container  mt-4">
+                <div className="d-flex   justify-content-around flex-wrap">
 
                     {pokemon.map((data, id) => {
 
@@ -50,7 +60,7 @@ export default function PokeList(props) {
 
 
                 </div>
-            </div>
+            </div> */}
 
         </div >
     );
