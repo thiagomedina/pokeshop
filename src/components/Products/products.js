@@ -26,7 +26,7 @@ export default function Products(props) {
     return (
         <div className={visible()}>
             {
-                showMsg ? <div  className="alert alert-secondary" role="alert">
+                showMsg ? <div  className="alert alert-success" role="alert">
                     <b>{product}</b> adicionado com sucesso ao carrinho!
                 </div> : null
             }

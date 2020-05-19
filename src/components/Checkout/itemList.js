@@ -11,10 +11,15 @@ export default function ItemList(props) {
         );
       }
       
-      const item = props.products.map(prod =>
-        <span className="" key={prod.nome}>
-          {prod.name} - {prod.amount} x {prod.price}
-        </span>
+      const item = props.products.map(prod => 
+        
+         <div>
+        <hr className="my-4" />
+          <span className="" key={prod.nome}>
+            {prod.name} - {prod.amount} x {prod.price}
+          </span>
+          </div>
+      
       );
       return item;
     }
@@ -24,5 +29,6 @@ export default function ItemList(props) {
   }
   
   ItemList.propTypes = {
-    products: PropTypes.array.isRequired
+    products: PropTypes.array.isRequired,
+    removeFromCart: PropTypes.func.isRequired
   }

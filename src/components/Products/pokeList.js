@@ -3,6 +3,7 @@ import api from '../../services/api';
 import Card from '../Card/card';
 import PropTypes from 'prop-types';
 
+
 export default function PokeList(props) {
 
     const [pokemon, setPokemon] = useState([]);
@@ -35,7 +36,7 @@ export default function PokeList(props) {
     return (
         <div>
 
-            <div className="container mt-4">
+            <div className="container-fluid mt-4">
                 <div className="d-flex flex-wrap">
 
                     {pokemon.map((data, id) => {
@@ -44,9 +45,6 @@ export default function PokeList(props) {
                         return (
 
                             <Card key={data.name} name={data.name} image={picture} price={data.price} clickFunction={(event) => handleBuy(event, data)} />
-
-
-
                         )
                     })}
 

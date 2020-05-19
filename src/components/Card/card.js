@@ -15,18 +15,6 @@ export default function Card(props) {
             </div>
         </div>
 
-        // <div class="container-fluid">
-        // <div class="produtos d-flex flex-wrap">
-
-        //   <!--produto-->
-        //   <div class="card m-2">
-        //     <img class="card-img-top" src="https://i.ibb.co/wW5c58Z/COBALT.jpg" alt="">
-        //     <div class="card-body">
-        //       <p class="card-title">Cod: GM2003</p>
-        //       <h6 class="">Mod: COBALT</h6>
-        //     </div>
-        //   </div>
-
 
     )
 }

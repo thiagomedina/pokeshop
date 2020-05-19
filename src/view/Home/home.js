@@ -3,12 +3,13 @@ import React, { useState, useEffect } from 'react';
 import Products from '../../components/Products/products'
 import Checkout from '../../components/Checkout/checkout'
 import NavBar from '../../components/Navbar/navbar'
+import './home.css'
 
 export default function Home() {
     const [shopCart, setShopCart] = useState({ products: [] });
     const [showProduct, setShowProduct] = useState(true);
     const [showCheckout, setShowCheckout] = useState(false);
-    const [total, setTotal] = useState('0,00'); 
+    const [total, setTotal] = useState('0,00');
 
 
 
@@ -36,38 +37,49 @@ export default function Home() {
         setShopCart(objShopCart);
     }
 
-    // function handleShowProduct() {
-    //     setShowCheckout(false)
-    //     setShowProduct(true)
-    // }
+    function removeFromCart(product) {
+        const cartItems = shopCart.products.slice();
+        setShopCart({
+            cartItems: cartItems.filter((x) => x.name !== product.name),
+        });
+    }
+
+   
 
     function handleShowCheckout(total) {
-        // setShowCheckout(true)
-        // setShowProduct(false)
+    
         setTotal(total);
 
     }
 
     function handleCleanShopCart() {
         setShopCart({ products: [] });
-      }
+    }
     return (
         <div>
-            <div>
-                <NavBar
-                    products={shopCart.products}
-                    // handleShowProduct={handleShowProduct}
-                    handleShowCheckout={handleShowCheckout}
-                />
 
-                <Products
-                    visible={showProduct}
-                    addProduct={addProduct}
-                />
-                   <Checkout
-                     products={shopCart.products}
-                    handleShowCheckout={handleShowCheckout}
+
+            <NavBar
+                products={shopCart.products}
+                handleShowCheckout={handleShowCheckout}
+            />
+            <div className="container-fluid">
+                <div className="row d-flex flex-wrap">
+                <div className="col-9">
+                    <Products
+                        visible={showProduct}
+                        addProduct={addProduct}
                     />
+                </div>
+                <div className="col sidebar">
+                    <Checkout
+                            products={shopCart.products}
+                            handleCleanShopCart={handleCleanShopCart}
+                            handleShowCheckout={handleShowCheckout}
+                            removeFromCart={removeFromCart}
+                    />
+                    </div>
+                    </div>
             </div>
         </div >
     );
