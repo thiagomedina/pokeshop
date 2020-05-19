@@ -1,7 +1,10 @@
 .sidebar{
-    background-color: #bbbbbbce;
+    background-color: #f8f8f8;
     height: 100%;
     margin :20px 10px 20px;
     padding: 10px;
     border-radius: 15   px;
+}
+.hidden{
+    display:none;
 }

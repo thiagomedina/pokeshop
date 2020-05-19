@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 export default function NavBar(props) {
 
     return (
-        <nav className="navbar navbar-ligth bg-info justify-content-between">
+        <nav className="navbar navbar-ligth bg-info justify-content-between ">
             <a className="navbar-brand">PokeShop</a>
 
             <form className="form-inline ">

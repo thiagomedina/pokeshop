@@ -24,13 +24,13 @@ export default function Checkout(props) {
 
         <div className="">
             <h1 className="display-4">Carrinho</h1>
-            <p className="lead">Produtos</p>
+            <p className="lead">Resumo do pedido</p>
 
             <ItemList products={props.products}/>
             <hr className="my-2" />
 
             <span > Total:R$ {totalCalculate()}</span><br />
-            <a className={`btn btn-primary btn-sm mt-3 ${props.products.lengths === 0 ? 'hidden' : null}`} href="#" role="button"  onClick={props.handleCleanShopCart} >Finalizar Compra</a>
+            <a className={`btn btn-primary btn-sm mt-3 ${props.products.length === 0 ? 'hidden' : null}`} href="#"  onClick={props.handleCleanShopCart} >Finalizar Compra</a>
         </div>
 
     );
