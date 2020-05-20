@@ -1,5 +1,5 @@
 ## Aplicação Pokeshop
- teste técnico para vaga de front end na empresa B2W. 
+ Teste técnico para vaga de front end junior na B2W Digital. 
 
 
 
