@@ -3,8 +3,8 @@ import { Route } from 'react-router-dom';
 
 
 import './home.css'
-import HomeFire from './homeFire'
-import HomeWater from './homeWater';
+import HomeFire from '../view/Home/homeFire'
+import HomeWater from '../view/Home/homeWater';
 
 
 export default function Core() {

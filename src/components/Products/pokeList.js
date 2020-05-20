@@ -14,13 +14,13 @@ export default function PokeList(props) {
 
         const pokes = response.data.results;
         const arrayPoke = [];
-         let value = props.types
+        let value = props.types
 
         for (let poke of pokes) {
             const res = await api.get(`https://pokeapi.co/api/v2/pokemon/${poke.name}`)
             let type = res.data.types[0].type.name;
             if (type === value) {
-                
+
                 poke.sprite = res.data.sprites.back_default;
                 poke.price = (Math.random() * 100).toFixed(2).replace(".", ",");
                 arrayPoke.push(poke)
@@ -43,15 +43,12 @@ export default function PokeList(props) {
 
     return (
         <div>
-           
+
             <div className="container  mt-4">
                 <div className="d-flex   justify-content-around flex-wrap">
 
-                    {pokemon.map((data, id) => {
-
-                        // let picture = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id + 1}.png`
+                    {pokemon.map((data) => {
                         return (
-
                             <Card key={data.name} name={data.name} image={data.sprite} price={data.price} clickFunction={(event) => handleBuy(event, data)} />
                         )
                     })}
