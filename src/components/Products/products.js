@@ -10,11 +10,6 @@ export default function Products(props) {
     const [showMsg, setShowMsg] = useState(false);
     const [product, setProduct] = useState('');
 
-    function visible() {
-
-        return props.visible ? null : 'hidden';
-    }
-
     function showMessage(product) {
         setShowMsg(true);
         setProduct(product.name);
@@ -24,20 +19,22 @@ export default function Products(props) {
     }
 
     return (
-        <div className={visible()}>
+        <>
+        <div >
             {
                 showMsg ? <div  className="alert alert-success mt-2" role="alert">
                     <b>{product}</b> adicionado com sucesso ao carrinho!
                 </div> : null
             }
-
             <PokeList
                 showMessage={showMessage}
-                addProduct={props.addProduct} />
-        </div>
+                addProduct={props.addProduct}
+                types={props.types} />
+      </div>
+            </>
     );
 }
 Products.propTypes = {
-    visible: PropTypes.bool.isRequired,
-    addProduct: PropTypes.func.isRequired
+    addProduct: PropTypes.func.isRequired,
+    types:PropTypes.string.isRequired
 }

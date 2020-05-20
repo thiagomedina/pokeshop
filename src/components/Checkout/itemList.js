@@ -30,5 +30,5 @@ export default function ItemList(props) {
   
   ItemList.propTypes = {
     products: PropTypes.array.isRequired,
-    removeFromCart: PropTypes.func.isRequired
+    // removeFromCart: PropTypes.func.isRequired
   }

@@ -14,8 +14,8 @@ export default function Card(props) {
                 <button type="button" className="btn btn-outline-success mb-2" onClick={props.clickFunction}>comprar <span>{`R$ ${props.price}`}</span></button>
             </div>
         </div>
+ 
 
-
-    )
+    )  
 }
 
