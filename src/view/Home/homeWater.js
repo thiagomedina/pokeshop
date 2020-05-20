@@ -16,7 +16,16 @@ export default function HomeWater(props) {
                 products={props.products}
                 handleShowCheckout={props.handleShowCheckout}
                 color={"bg-info"}
+                local={"/homefire"}
+                link={"Tipo Fogo"}
             />
+
+
+
+         
+             <h3><small class="text-muted m-3">Pokémon da primeira geração do tipo água</small></h3>
+            
+
 
 
 
@@ -34,6 +43,7 @@ export default function HomeWater(props) {
                             products={props.products}
                             handleCleanShopCart={props.handleCleanShopCart}
                             handleShowCheckout={props.handleShowCheckout}
+                            color={"btn btn-info"}
                         // removeFromCart={propremoveFromCart}
                         />
                     </div>

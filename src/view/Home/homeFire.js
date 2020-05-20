@@ -16,9 +16,11 @@ export default function HomeFire(props) {
             products={props.products}
                 handleShowCheckout={props.handleShowCheckout}
                 color={"bg-danger"}
+                local={"/"}
+                link={"Tipo Água"}
         />
 
-
+<h3><small class="text-muted m-3">Pokémon da primeira geração do tipo fogo</small></h3>
 
         <div className="container-fluid">
             <div className="row d-flex flex-wrap">
@@ -33,7 +35,8 @@ export default function HomeFire(props) {
                     <Checkout
                         products={props.products}
                         handleCleanShopCart={props.handleCleanShopCart}
-                        handleShowCheckout={props.handleShowCheckout}
+                            handleShowCheckout={props.handleShowCheckout}
+                            color={"btn btn-danger"}
                     // removeFromCart={propremoveFromCart}
                     />
                 </div>

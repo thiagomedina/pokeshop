@@ -23,7 +23,7 @@ export default function PokeList(props) {
             let type = res.data.types[0].type.name;
             if (type === value) {
 
-                poke.sprite = res.data.sprites.back_default;
+                poke.sprite = res.data.sprites.front_default;
                 poke.price = (Math.random() * 100).toFixed(2).replace(".", ",");
                 arrayPoke.push(poke)
             }

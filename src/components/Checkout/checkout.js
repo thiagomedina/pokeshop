@@ -30,7 +30,7 @@ export default function Checkout(props) {
             <hr className="my-2" />
 
             <span > Total:R$ {totalCalculate()}</span><br />
-            <a className={`btn btn-primary btn-sm mt-3 ${props.products.length === 0 ? 'hidden' : null}`} href="#" onClick={props.handleCleanShopCart} >Finalizar Compra</a>
+            <a className={`btn ${props.color} btn-sm mt-3 ${props.products.length === 0 ? 'hidden' : null}`} href="#" onClick={props.handleCleanShopCart} >Finalizar Compra</a>
         </div>
 
     );
@@ -39,6 +39,7 @@ Checkout.propTypes = {
     products: PropTypes.array.isRequired,
     handleCleanShopCart: PropTypes.func.isRequired,
     // removeFromCart: PropTypes.func.isRequired
+    color:PropTypes.string.isRequired
 
 
 }
