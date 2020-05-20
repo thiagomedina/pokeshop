@@ -14,7 +14,8 @@ export default function HomeFire(props) {
 
         <NavBar
             products={props.products}
-            handleShowCheckout={props.handleShowCheckout}
+                handleShowCheckout={props.handleShowCheckout}
+                color={"bg-danger"}
         />
 
 
@@ -24,7 +25,8 @@ export default function HomeFire(props) {
                 <div className="col-9">
                     <Products
                         addProduct={props.addProduct}
-                        types={"fire"}
+                            types={"fire"}
+                            color={"btn-outline-danger"}
                     />
                 </div>
                 <div className="col sidebar">

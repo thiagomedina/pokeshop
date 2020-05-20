@@ -15,6 +15,7 @@ export default function HomeWater(props) {
             <NavBar
                 products={props.products}
                 handleShowCheckout={props.handleShowCheckout}
+                color={"bg-info"}
             />
 
 
@@ -25,6 +26,7 @@ export default function HomeWater(props) {
                         <Products
                             addProduct={props.addProduct}
                             types={"water"}
+                            color={"btn-outline-info"}
                         />
                     </div>
                     <div className="col sidebar">

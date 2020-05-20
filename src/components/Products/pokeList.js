@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import api from '../../services/api';
 import Card from '../Card/card';
+import Spinner from '../Spinner/spinner'
 import PropTypes from 'prop-types';
 
 
 export default function PokeList(props) {
 
     const [pokemon, setPokemon] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     async function loadApi() {
 
@@ -26,8 +28,8 @@ export default function PokeList(props) {
                 arrayPoke.push(poke)
             }
         }
-        setPokemon(arrayPoke)
-        console.log(arrayPoke)
+        setPokemon(arrayPoke);
+        setLoading(false);
 
     }
 
@@ -41,21 +43,28 @@ export default function PokeList(props) {
         props.showMessage(product);
     }
 
+
+
     return (
         <div>
 
-            <div className="container  mt-4">
-                <div className="d-flex   justify-content-around flex-wrap">
 
-                    {pokemon.map((data) => {
-                        return (
-                            <Card key={data.name} name={data.name} image={data.sprite} price={data.price} clickFunction={(event) => handleBuy(event, data)} />
-                        )
-                    })}
+            {
+                loading
+                    ?
+                    <Spinner />
+                    :
+                    <div className="container  mt-4">
+                        <div className="d-flex   justify-content-around flex-wrap">
 
-
-                </div>
-            </div>
+                            {pokemon.map((data) => {
+                                return (
+                                    <Card key={data.name} name={data.name} image={data.sprite} color={props.color} price={data.price} clickFunction={(event) => handleBuy(event, data)} />
+                                )
+                            })}
+                        </div>
+                    </div>
+            }
 
         </div >
     );
@@ -63,6 +72,7 @@ export default function PokeList(props) {
 PokeList.propTypes = {
     addProduct: PropTypes.func.isRequired,
     showMessage: PropTypes.func.isRequired,
-    types: PropTypes.string.isRequired
+    types: PropTypes.string.isRequired,
+    color: PropTypes.string.isRequired
 
 }

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 export default function NavBar(props) {
 
     return (
-        <nav className={`navbar  justify-content-between${props.color}`}>
+        <nav className={`navbar justify-content-between   ${props.color}`}>
             <a className="navbar-brand">PokeShop</a>
 
             <form className="form-inline ">
@@ -17,6 +17,7 @@ export default function NavBar(props) {
 }
 NavBar.propTypes = {
     products: PropTypes.array.isRequired,
+    color: PropTypes.string.isRequired
     
 
 

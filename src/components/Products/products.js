@@ -19,22 +19,26 @@ export default function Products(props) {
     }
 
     return (
-        <>
-        <div >
-            {
-                showMsg ? <div  className="alert alert-success mt-2" role="alert">
-                    <b>{product}</b> adicionado com sucesso ao carrinho!
-                </div> : null
+        
+            <div >
+                {
+                    showMsg ? <div className="alert alert-success mt-2" role="alert">
+                        <b>{product}</b> adicionado com sucesso ao carrinho!
+                      </div> : null
             }
-            <PokeList
-                showMessage={showMessage}
-                addProduct={props.addProduct}
-                types={props.types} />
-      </div>
-            </>
+            
+                <PokeList
+                    showMessage={showMessage}
+                    addProduct={props.addProduct}
+                    types={props.types}
+                    color={props.color}
+                />
+
+            </div>
     );
 }
 Products.propTypes = {
     addProduct: PropTypes.func.isRequired,
-    types:PropTypes.string.isRequired
+    types: PropTypes.string.isRequired,
+    color: PropTypes.string.isRequired
 }

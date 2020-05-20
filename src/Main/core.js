@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Route } from 'react-router-dom';
 
 
-import './home.css'
 import HomeFire from '../view/Home/homeFire'
 import HomeWater from '../view/Home/homeWater';
 
