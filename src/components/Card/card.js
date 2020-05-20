@@ -12,7 +12,7 @@ export default function Card(props) {
                 <h5>{props.name}</h5>
             </div>
             <div>
-                <button type="button" className={ `btn  ${props.color}  mb-2`} onClick={props.clickFunction}>comprar <span>{`R$ ${props.price}`}</span></button>
+                <button type="button" className={ ` styleButton  btn  ${props.color}  mb-2`} onClick={props.clickFunction}>comprar <span>{`R$ ${props.price}`}</span></button>
             </div>
         </div>
  
