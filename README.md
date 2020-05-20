@@ -9,7 +9,7 @@ A pasta node_modules não é enviada para o Github. Por isso, ao fazer download 
 ```console
 npm install
 ```
-projeto feito com ReactJs e Bootstrap
+Projeto feito com ReactJs e Bootstrap.
 
 ### Iniciar a aplicacão :checkered_flag:
 
