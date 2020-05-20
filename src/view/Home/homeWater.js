@@ -23,7 +23,7 @@ export default function HomeWater(props) {
 
 
          
-             <h3><small class="text-muted m-3">Pokémon da primeira geração do tipo água</small></h3>
+             <h3><small className="text-muted m-3">Pokémon da primeira geração do tipo água</small></h3>
             
 
 
